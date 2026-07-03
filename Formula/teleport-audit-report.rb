@@ -5,21 +5,21 @@
 class TeleportAuditReport < Formula
   desc "Audit reporting CLI for a Teleport cluster (activity, requests, security, compliance)"
   homepage "https://github.com/tenaciousdlg/teleport-audit-report"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.4.0/teleport-audit-report_1.4.0_darwin_amd64.tar.gz"
-      sha256 "e9ace2395a9252d17f895c453653994abd2f8601bb50b76aa9383f08fdfad585"
+      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.5.0/teleport-audit-report_1.5.0_darwin_amd64.tar.gz"
+      sha256 "8f76a6723ea86442e5b42f812c75188a261790db023a8669ddaac6d320df249d"
 
       define_method(:install) do
         bin.install "audit-report"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.4.0/teleport-audit-report_1.4.0_darwin_arm64.tar.gz"
-      sha256 "4804c07f8523de8776039d1af36127a18a111eb4e178043ded0092d557fce33d"
+      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.5.0/teleport-audit-report_1.5.0_darwin_arm64.tar.gz"
+      sha256 "4c83c592d347fe581166ec40abec126501a51549b33a85421c5477a95d7fec80"
 
       define_method(:install) do
         bin.install "audit-report"
@@ -29,15 +29,15 @@ class TeleportAuditReport < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.4.0/teleport-audit-report_1.4.0_linux_amd64.tar.gz"
-      sha256 "23126484c027358e0f3b0c6a57cb2f9c7366a6c8cc15f6363e784382ee9dc673"
+      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.5.0/teleport-audit-report_1.5.0_linux_amd64.tar.gz"
+      sha256 "c2e23b758888dcc929ede431626ada0c75d4da6a094f31bb3fac00f623aa6dc8"
       define_method(:install) do
         bin.install "audit-report"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.4.0/teleport-audit-report_1.4.0_linux_arm64.tar.gz"
-      sha256 "a3bd378438091e5ba7ae661e3eb33871220343dea8cf089a6a60aec966b35615"
+      url "https://github.com/tenaciousdlg/teleport-audit-report/releases/download/v1.5.0/teleport-audit-report_1.5.0_linux_arm64.tar.gz"
+      sha256 "0b81d8f3e7a76fbca22adbaaa2af6c7243ea293953c138003293e9777cee753a"
       define_method(:install) do
         bin.install "audit-report"
       end
